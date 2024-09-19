@@ -1,0 +1,38 @@
+﻿@using WebApplication1.Formatters
+
+@model IEnumerable<Albums>
+
+@{
+    ViewData["Title"] = "View";
+    DateFormatter dateformat = new DateFormatter();
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="AddView">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Date added</td>
+            <td>Cover</td>
+            <td>Type</td>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.AlbumTitle</td>
+            <td>@dateformat.DateToStrng(@item.DateAdded)</td>
+            <td>@item.AlbumCover</td>
+            <td>@item.AlbumType</td>
+            <td>
+                <button><a asp-action="Edit" asp-route-id="@item.AlbumID">Edit</a></button>
+                <button><a asp-action="Delete" asp-route-id="@item.AlbumID">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

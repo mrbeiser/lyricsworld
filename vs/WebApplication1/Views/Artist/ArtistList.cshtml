@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Artist>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Photo</td>
+            <td>Popularity</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Photo</td>
+                <td>@item.Popularity</td>
+                <td>
+                    <button><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></button>
+                    <button><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

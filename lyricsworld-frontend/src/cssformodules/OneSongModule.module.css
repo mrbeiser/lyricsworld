@@ -1,0 +1,17 @@
+.songBox > *{
+    color: black;
+}
+
+.lyricsBox{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: var(--text-size-lg);
+}
+
+.songTitle{
+    font-size: var(--text-size-5xl);
+}
+.lyricsLines{
+    color: black;
+}

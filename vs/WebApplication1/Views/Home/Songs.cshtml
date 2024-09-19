@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Song>
+
+@{
+
+}
+
+<h1>
+    <button><a asp-action="AddSong" style="text-decoration:none;color:black;">Add new song</a></button> <br />
+
+    @foreach(var song in Model)
+    {
+       
+        <div>@song.SongID  </div>
+        <br />
+        <div>@song.SongTitle </div>
+        <br />
+        <div class="songvalues">  @Html.Raw(song.SongLyrics.Replace("|", "<br />"))</div> <br />
+        <a asp-action="Edit" asp-route-SongID="@song.SongID">Edit</a>
+        <a asp-action="Delete" asp-route-SongID="@song.SongID">Delete</a>
+        <br /><br />
+    }
+
+    <style>
+        .songvalues{
+            font-size:small;
+        }
+    </style>
+</h1>

@@ -1,0 +1,89 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight:bold;
+}
+input{
+    box-shadow: 2px 4px 6.9px rgba(0, 0, 0, 0.3);
+}
+#RegisterContainer 
+{
+    background-color: var(--main-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1
+{
+    font-size: var(--text-size-8xl);
+}
+
+input[type=text]
+{
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 45vw;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    margin-bottom: 10px;
+}
+
+form > input[type=button]
+{
+    border: none;
+    border-radius: 10px ;
+    height: 40px;
+    width: 20vw;
+    background-color: white;
+    color: var(--main-color);
+    font-size: var(--text-size-2xl);
+}
+
+#usernameinput, #passwordinput, #emailinput 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+label
+{
+    font-size: var(--text-size-2xl);
+}
+
+h6
+{
+font-size: var(--text-size-lg);
+}
+
+#linktoregister
+{
+    text-decoration:underline;
+    color: #bbb9be;
+}
+
+@media screen and (width <800px) 
+{
+    input[type=text]
+    {
+        width: 50vh;
+    }
+}
+
+.icon{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    fill: white;
+}

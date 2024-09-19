@@ -1,0 +1,47 @@
+﻿@model WebApplication1.Models.Albums
+
+@{
+    ViewData["Title"] = "Get";
+}
+
+<h1>Get</h1>
+
+<h4>Albums</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveEdited">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AlbumID" />
+            <div class="form-group">
+                <label asp-for="AlbumTitle" class="control-label"></label>
+                <input asp-for="AlbumTitle" class="form-control" />
+                <span asp-validation-for="AlbumTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateAdded" class="control-label"></label>
+                <input asp-for="DateAdded" type="date"/>
+                <span asp-validation-for="DateAdded" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="AlbumCover" class="control-label"></label>
+                <input asp-for="AlbumCover" class="form-control" />
+                <span asp-validation-for="AlbumCover" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlbumType" class="control-label"></label>
+                <input asp-for="AlbumType" class="form-control" />
+                <span asp-validation-for="AlbumType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AlbumList">Back to List</a>
+</div>
+

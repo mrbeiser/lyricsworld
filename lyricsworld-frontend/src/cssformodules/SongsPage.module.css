@@ -1,0 +1,62 @@
+#pagecontainer{
+    font-size: calc(1rem + 2vw);
+    min-height: 100vh;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: 
+      ".  header header header header header header header header header header header header header header ."
+      "main main main main main main main main main main main main main main main main"
+      "main main main main main main main main main main main main main main main main"
+      "main main main main main main main main main main main main main main main main"
+      "main main main main main main main main main main main main main main main main"
+      "main main main main main main main main main main main main main main main main"
+      "main main main main main main main main main main main main main main main main"
+      "main main main main main main main main main main main main main main main main"
+      "main main main main main main main main main main main main main main main main"
+    ;
+    background: radial-gradient(112.78% 112.78% at 50% 50%, rgba(251, 251, 251, 0.984314) 1.5%, rgba(230, 230, 230, 0.984314) 30.53%, rgba(251, 251, 251, 0.984314) 43.18%, rgba(223, 210, 255, 0.984314) 100%);
+  }
+
+#search
+{
+  color: black;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 4px 6.9px rgba(0, 0, 0, 0.3);
+  font-size: var(--text-size-2xl);
+}
+
+.list 
+{
+  min-width: 45vw;
+  color: black;
+  min-height: 100px;
+  box-shadow: 2px 4px 6.9px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.articlecontainer
+{
+
+}
+
+.lyricsLine{
+  color: black
+}
+
+.viewbutton
+{
+  border: 2px black solid;
+  border-radius: 3px;
+
+  color: black;
+  font-size: var(--text-size-lg);
+  padding: 1rem;
+  
+}
